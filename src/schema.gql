@@ -1,0 +1,17 @@
+# schema.gql
+
+type User {
+  id: Int
+  username: String
+  job: String
+}
+
+type Mutation {
+  userCreate(username: String, job: String): User
+  userUpdate(id: Int, username: String, job: String): User
+  userDelete(id: Int): User
+}
+
+type Query {
+  users: [User!]!
+}
